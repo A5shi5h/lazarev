@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body , html {
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    height: 13vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #111;
+    padding: 3vw 8vw;
+    z-index: 10;
+}
+
+nav h1{
+    padding-top: 3vh;
+}
+
+.nav-items{
+    display: flex;
+    align-items: flex-start;
+    gap: 2vw;
+    padding: .1vh 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-items h4{
+    margin-bottom: .5vw;
+    font-size: .8vw;
+    font-weight: 600;
+}
+
+.nav-items h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow: hidden;
+}
+
+.nav-items h5 span{
+    font-size: .8vw;
+    font-weight: 400;
+    display: inline-block;
+    transform:  translateY(25px);
+}
+
+.nav-items h4{
+    padding : 2vw 0 ;
+}
+
+
+#nav-button{
+    padding: 15px 20px;
+    background-color: #0da34e;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+#nav-button svg{
+    height: 1vw;
+    width: 1vw;
+}
+
+
+#nav-bottom{
+     width: 80%;
+     height: 0vh;
+     position: absolute;
+     top: 100%;
+     z-index: 9;
+     border-bottom: 1px solid white;
+     background-color: #111;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 h1{
+    font-size: 8vw;
+    font-weight: 900;
+    line-height: 8.5vw;
+}
+
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0da34e;
+    border-radius: 50%;
+}
+
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+    line-height: 1vh;
+}
+
+#page1-elem{
+   display: flex;
+   gap: 10px;
+   margin-top: 1.5vh;
+   justify-content: center;
+   align-items: center;
+}
+
+#page1-elem h4{
+    padding: 15px 15px;
+    border: 1px solid rgb(217, 215, 215);
+    border-radius: 50px;
+    font-weight: 400;
+}
+
+#moving-div{
+    position: absolute;
+    bottom: 5%;
+    width: 44%;
+    white-space: nowrap;
+    padding: 1.1vw;
+    overflow: hidden;
+}
+
+#moving-div .move{
+  display: inline-block;
+  animation-name: moveSlide;
+  animation-duration: 9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveSlide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+#moving-div .move img{
+    height: 1.4vw;
+    margin: 0 1vw;
+}
+
+#leftblur{
+    background: linear-gradient(to left , transparent , #111);
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#rightblur{
+    background: linear-gradient(to right , transparent , #111);
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #111;
+    padding: 2vw 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgb(81, 78, 78);
+}
+
+#page2-left{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3vw 0;
+}
+
+#page2-left p {
+    padding: 0 2vw;
+    font-weight: 400;
+}
+
+#page2-left h5{
+    padding: 0 2vw;
+    font-weight: 400;
+    width: 70%;
+    font-size: 1rem;
+}
+
+#page2-right{
+    height: 100%;
+    width: 50%;
+}
+
+.right-elem{
+    position: relative;
+    padding-top: 2vw;
+    padding-bottom: 8vw;
+    border-bottom: 1px solid #333;
+}
+
+.right-elem h2{
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
+.right-elem img{
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+}
